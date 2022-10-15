@@ -1,0 +1,67 @@
+.login-page {
+  @include flex {
+    gap: 20px;
+
+    @include respond("<", $md-w) {
+      flex-direction: column-reverse;
+    }
+  }
+  height: 100vh;
+
+  > div {
+    width: 100%;
+    height: 100%;
+    padding: 1.5em 1em;
+
+    @include respond(">", $md-w) {
+      width: 50%;
+      padding: 3em;
+    }
+  }
+
+  .right {
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+
+    @include respond("<", $md-w) {
+      height: 50%;
+    }
+  }
+
+  .left {
+    h1 {
+      @include respond("<", $md-w) {
+        font-size: 120%;
+      }
+    }
+    .login-button-wrapper {
+      max-width: 450px;
+      margin: auto;
+      margin-top: 5em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      @include respond("<", $md-w) {
+        margin-top: 3em;
+      }
+    }
+
+    .login-go-back {
+      text-align: center;
+      margin-top: 3em;
+
+      a {
+        text-decoration: none;
+        color: $primary;
+        font-size: 100%;
+        font-weight: 600;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

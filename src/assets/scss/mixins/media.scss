@@ -1,0 +1,18 @@
+@mixin respond($sign, $value) {
+  @if $sign == ">" {
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  }
+  @if $sign == "<" {
+    @media only screen and (max-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-minmax($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

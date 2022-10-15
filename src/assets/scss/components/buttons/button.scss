@@ -1,0 +1,14 @@
+.component-button {
+  border: none;
+  background-color: $secondary;
+  color: $primary;
+  padding: 0.8em 2em;
+  min-width: 300px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 100%;
+
+  &:hover {
+    background-color: rgba($secondary, 0.8);
+  }
+}

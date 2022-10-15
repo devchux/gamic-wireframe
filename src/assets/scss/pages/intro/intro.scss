@@ -1,0 +1,26 @@
+.intro-page {
+  @include flex;
+  padding: 3em;
+
+  @include respond("<", $sm-w) {
+    padding: 1.5em;
+  }
+  @include respond(">", $md-w) {
+    height: 100vh;
+  }
+
+  .intro-content-wrapper {
+    h1 {
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    .intro-cards-wrapper {
+      @include flex {
+        flex-wrap: wrap;
+        gap: 1.5em;
+      }
+      margin-top: 2em;
+    }
+  }
+}
