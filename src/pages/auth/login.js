@@ -14,8 +14,8 @@ const Login = () => {
 
   const loginWithGoogle = useGoogleLogin({
     onSuccess: (response) => {
-      if (response.credential) {
-        localStorage.setItem("cred_id", response.credential);
+      if (response.code) {
+        localStorage.setItem("cred_id", response.code);
         navigate(state.type === "manager" ? "/manager" : "/user");
       }
     },
