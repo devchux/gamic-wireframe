@@ -7,11 +7,6 @@ const Login = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  const mapper = {
-    user: "User",
-    manager: "Manager",
-  };
-
   const loginWithGoogle = useGoogleLogin({
     onSuccess: (response) => {
       if (response.code) {
@@ -26,7 +21,7 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="left">
-        <h1>Sign in as a {mapper[state.type] || "User"}</h1>
+        <h1>Connect socials</h1>
         <div className="login-button-wrapper">
           <AuthButton
             onClick={loginWithGoogle}

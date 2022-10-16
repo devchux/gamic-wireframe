@@ -7,7 +7,6 @@ const Intro = () => {
   return (
     <div className="intro-page">
       <div className="intro-content-wrapper">
-        <h1>Sign in as:</h1>
         <div className="intro-cards-wrapper">
           <IntroCard
             image="/images/manager.png"
@@ -21,9 +20,7 @@ const Intro = () => {
             image="/images/user.png"
             buttonText="Continue"
             title="User"
-            onButtonClick={() =>
-              navigate("/login", { state: { type: "user" } })
-            }
+            onButtonClick={() => navigate("/user")}
           />
         </div>
       </div>
