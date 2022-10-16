@@ -1,12 +1,12 @@
 import React from "react";
 
-const Button = ({ children, className, full, ...rest }) => {
+const Button = ({ children, className, full, fit, ...rest }) => {
   return (
     <button
       {...rest}
       className={`component-button ${full ? "full-width" : ""} ${
-        className || ""
-      }`}
+        fit ? "fit" : ""
+      } ${className || ""}`}
     >
       {children}
     </button>

@@ -1,0 +1,63 @@
+.video-thumbnail {
+  max-width: 360px;
+  width: 100%;
+  cursor: pointer;
+
+  .image-wrapper {
+    height: 202px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .new-tag {
+      position: absolute;
+      width: fit-content;
+      padding: 0.5em;
+      top: 1em;
+      left: 1em;
+      font-size: 0.7em;
+      background-color: $tertiary;
+    }
+  }
+  .video-thumbnail-content {
+    padding: 1em 0.5em;
+
+    h4 {
+      max-height: 36px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @supports (-webkit-line-clamp: 2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    p {
+      color: rgba($primary, 0.6);
+      margin-top: 0.6em;
+
+      @include flex {
+        justify-content: flex-start;
+        gap: 0.5em;
+      }
+
+      b {
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: rgba($primary, 0.6);
+      }
+    }
+  }
+}

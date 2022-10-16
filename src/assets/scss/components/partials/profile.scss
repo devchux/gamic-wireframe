@@ -1,0 +1,55 @@
+.profile-wrapper {
+  @include glass;
+  max-width: 450px;
+  padding: 1em;
+  width: 100%;
+
+  .profile-image-name-wrapper {
+    @include flex {
+      justify-content: flex-start;
+      gap: 1.2em;
+    }
+
+    .profile-image {
+      @include flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: purple;
+
+      h2 {
+        font-size: 200%;
+      }
+    }
+
+    .profile-name-wrapper {
+      h3 {
+        font-size: 130%;
+      }
+      > div {
+        margin-top: 1em;
+
+        p {
+          font-weight: 600;
+          line-height: 1.2em;
+          color: $primary;
+        }
+
+        small {
+          color: rgba($primary, 0.5);
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .profile-info-wrapper {
+    margin-top: 2em;
+    .info {
+      margin-bottom: 1em;
+      @include flex {
+        justify-content: space-between;
+      }
+    }
+  }
+}

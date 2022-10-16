@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import Intro from "./pages/intro";
+import Login from "./pages/auth/login";
+import User from "./pages/profile/user";
+import Manager from "./pages/profile/manager";
 
 import "./assets/scss/base.scss";
-import Login from "./pages/auth/login";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
         <Routes>
           <Route index element={<Intro />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/manager" element={<Manager />} />
         </Routes>
       </GoogleOAuthProvider>
     </BrowserRouter>

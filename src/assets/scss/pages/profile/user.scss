@@ -1,0 +1,30 @@
+.user-page {
+  @include flex;
+  height: 100vh;
+
+  .notify {
+    @include glass;
+    @include flex {
+      gap: 0.5em;
+    }
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    padding: 0.8em 1em;
+
+    p {
+      a {
+        text-decoration: none;
+        color: $primary;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .close-button {
+      padding: 0.3em 1em;
+    }
+  }
+}

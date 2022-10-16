@@ -1,21 +1,15 @@
 .intro-card {
+  @include glass;
   max-width: 300px;
   width: 100%;
-  /* From https://css.glass */
-  background: rgba($primary, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba($tertiary, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba($primary, 0.3);
 
   .image-wrapper {
     overflow: hidden;
     height: 350px;
     border-radius: 16px;
 
-    @include respond('<', $sm-w) {
-        height: 220px;
+    @include respond("<", $sm-w) {
+      height: 220px;
     }
 
     img {

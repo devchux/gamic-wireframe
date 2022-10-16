@@ -16,3 +16,7 @@ body {
   min-width: $full-w !important;
   display: block;
 }
+
+.flex {
+  @include flex;
+}

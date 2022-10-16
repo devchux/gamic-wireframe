@@ -1,0 +1,93 @@
+.manager-page {
+  padding: 3em;
+
+  @include respond("<", $sm-w) {
+    padding: 1em;
+  }
+
+  .video-overlay {
+    position: fixed;
+    background-color: rgba($tertiary, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    .video-content-wrapper {
+      @include glass;
+      max-width: $lg-w;
+      margin: auto;
+      margin-top: 2em;
+      display: flex;
+      height: 400px;
+      overflow: hidden;
+
+      > div {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .video-wrapper {
+        video {
+          width: 100%;
+          height: 100%;
+          background-color: $tertiary;
+        }
+      }
+
+      .video-info {
+        padding: 1em;
+
+        h4 {
+          margin: 1em 0;
+    
+          @include flex {
+            justify-content: flex-start;
+            gap: 0.5em;
+          }
+    
+          b {
+            width: 5px;
+            height: 5px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: rgba($primary, 0.6);
+          }
+        }
+      }
+    }
+  }
+
+  .manager-page-header {
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgba($primary, 0.6);
+  }
+
+  .manager-page-content {
+    margin-top: 3em;
+
+    .manager-thumbnail-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @include respond("<", $lg-w) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include respond("<", $md-w) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond("<", $sm-w) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
