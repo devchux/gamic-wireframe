@@ -4,6 +4,7 @@ import Intro from "./pages/intro";
 import Login from "./pages/auth/login";
 import User from "./pages/profile/user";
 import Manager from "./pages/profile/manager";
+import Channel from "./pages/channel";
 
 import "./assets/scss/base.scss";
 
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/user" element={<User />} />
           <Route path="/manager" element={<Manager />} />
+          <Route path="/channel" element={<Channel />} />
         </Routes>
       </GoogleOAuthProvider>
     </BrowserRouter>

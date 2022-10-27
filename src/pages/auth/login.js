@@ -11,7 +11,7 @@ const Login = () => {
     onSuccess: (response) => {
       if (response.code) {
         localStorage.setItem("cred_id", response.code);
-        navigate(state.type === "manager" ? "/manager" : "/user");
+        navigate(state.type === "manager" ? "/channel" : "/user");
       }
     },
     onError: (response) => console.log("google failure", response),
